@@ -70,16 +70,16 @@ const Signup = () => {
       setPicLoading(false);
       return;
     }
-    if (password !== confirmpassword) {
-      toast({
-        title: "Passwords Do Not Match",
-        status: "warning",
-        duration: 5000,
-        isClosable: true,
-        position: "bottom",
-      });
-      return;
-    }
+    // if (password !== confirmpassword) {
+    //   toast({
+    //     title: "Passwords Do Not Match",
+    //     status: "warning",
+    //     duration: 5000,
+    //     isClosable: true,
+    //     position: "bottom",
+    //   });
+    //   return;
+    // }
     console.log(name, email, password, pic);
     try {
       const config = {
@@ -201,7 +201,7 @@ const Signup = () => {
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <FormControl id="password" isRequired>
+      {/* <FormControl id="password" isRequired>
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup size="md">
           <Input
@@ -215,8 +215,8 @@ const Signup = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-      </FormControl>
-      <FormControl id="pic">
+      </FormControl> */}
+      {/* <FormControl id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
           type="file"
@@ -224,7 +224,7 @@ const Signup = () => {
           accept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
         />
-      </FormControl>
+      </FormControl> */}
       <Button
         colorScheme="blue"
         width="100%"
