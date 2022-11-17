@@ -1,12 +1,12 @@
-import { Button } from "@chakra-ui/button";
-import { FormControl, FormLabel } from "@chakra-ui/form-control";
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
-import { VStack } from "@chakra-ui/layout";
-import { useState } from "react";
-import axios from "axios";
-import { useToast } from "@chakra-ui/react";
-import { useHistory } from "react-router-dom";
-import { ChatState } from "../../Context/ChatProvider";
+import { Button } from '@chakra-ui/button';
+import { FormControl, FormLabel } from '@chakra-ui/form-control';
+import { Input, InputGroup, InputRightElement } from '@chakra-ui/input';
+import { VStack } from '@chakra-ui/layout';
+import { useState } from 'react';
+import axios from 'axios';
+import { useToast } from '@chakra-ui/react';
+import { useHistory } from 'react-router-dom';
+import { ChatState } from '../../Context/ChatProvider';
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -16,22 +16,19 @@ const Login = () => {
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
 
-   const { selectedChat, setSelectedChat, user } = ChatState();
+  const { selectedChat, setSelectedChat, user } = ChatState();
 
   const history = useHistory();
 
-  
-        
-  
   const submitHandler = async () => {
     setLoading(true);
     if (!email || !password) {
       toast({
-        title: "Please Fill all the Feilds",
-        status: "warning",
+        title: 'Please Fill all the Feilds',
+        status: 'warning',
         duration: 5000,
         isClosable: true,
-        position: "bottom",
+        position: 'bottom',
       });
       setLoading(false);
       return;
@@ -41,36 +38,36 @@ const Login = () => {
     try {
       const config = {
         headers: {
-          "Content-type": "application/json",
+          'Content-type': 'application/json',
         },
       };
 
       const { data } = await axios.post(
-        "/api/user/login",
+        '/api/user/login',
         { email, password },
         config
       );
 
       // console.log(JSON.stringify(data));
       toast({
-        title: "Login Successful",
-        status: "success",
+        title: 'Login Successful',
+        status: 'success',
         duration: 5000,
         isClosable: true,
-        position: "bottom",
+        position: 'bottom',
       });
-      localStorage.setItem("userInfo", JSON.stringify(data));
+      localStorage.setItem('userInfo', JSON.stringify(data));
       setLoading(false);
-    
-      history.push("/chats");
+
+      history.push('/chats');
     } catch (error) {
       toast({
-        title: "Error Occured!",
+        title: 'Error Occured!',
         description: error.response.data.message,
-        status: "error",
+        status: 'error',
         duration: 5000,
         isClosable: true,
-        position: "bottom",
+        position: 'bottom',
       });
       setLoading(false);
     }
@@ -93,12 +90,12 @@ const Login = () => {
           <Input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            type={show ? "text" : "password"}
+            type={show ? 'text' : 'password'}
             placeholder="Enter password"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+              {show ? 'Hide' : 'Show'}
             </Button>
           </InputRightElement>
         </InputGroup>
@@ -112,7 +109,7 @@ const Login = () => {
       >
         Login
       </Button>
-      <Button
+      {/* <Button
         variant="solid"
         colorScheme="red"
         width="100%"
@@ -122,7 +119,7 @@ const Login = () => {
         }}
       >
         Get Guest User Credentials
-      </Button>
+      </Button> */}
     </VStack>
   );
 };
