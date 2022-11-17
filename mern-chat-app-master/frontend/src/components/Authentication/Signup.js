@@ -36,7 +36,7 @@ const Signup = () => {
     const { announcements } = await axios.put(
       `/api/chat/groupadd`,
       {
-        chatId: '63766de71441e74b88ef3e70',
+        chatId: '63762b8c62c3c75f2c04beef',
         userId: userid,
       },
       config
@@ -45,7 +45,7 @@ const Signup = () => {
     const { complaints } = await axios.put(
       `/api/chat/groupadd`,
       {
-        chatId: '63766e1c1441e74b88ef3e71',
+        chatId: '63762ba062c3c75f2c04bef0',
         userId: userid,
       },
       config
@@ -69,16 +69,16 @@ const Signup = () => {
       setPicLoading(false);
       return;
     }
-    if (password !== confirmpassword) {
-      toast({
-        title: 'Passwords Do Not Match',
-        status: 'warning',
-        duration: 5000,
-        isClosable: true,
-        position: 'bottom',
-      });
-      return;
-    }
+    // if (password !== confirmpassword) {
+    //   toast({
+    //     title: "Passwords Do Not Match",
+    //     status: "warning",
+    //     duration: 5000,
+    //     isClosable: true,
+    //     position: "bottom",
+    //   });
+    //   return;
+    // }
     console.log(name, email, password, pic);
     try {
       const config = {
@@ -199,21 +199,21 @@ const Signup = () => {
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <FormControl id="password" isRequired>
+      {/* <FormControl id="password" isRequired>
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup size="md">
           <Input
-            type={show ? 'text' : 'password'}
+            type={show ? "text" : "password"}
             placeholder="Confirm password"
             onChange={(e) => setConfirmpassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? 'Hide' : 'Show'}
+              {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
         </InputGroup>
-      </FormControl>
+      </FormControl> */}
       {/* <FormControl id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
