@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 function NavBar() {
@@ -23,17 +24,15 @@ function NavBar() {
                 <Nav.Link href="#my-projects" style={{ paddingRight: '2rem' }}>
                   Gate Entry
                 </Nav.Link>
-                <Nav.Link href="#my-projects" style={{ paddingRight: '2rem' }}>
+
+                <Link to="/directories" style={{ paddingRight: '2rem' }}>
                   Directory
-                </Nav.Link>
-                <Nav.Link
-                  href="#"
-                  target="_blank"
-                  style={{ paddingRight: '2rem' }}
-                >
+                </Link>
+                <Link to="/chats" style={{ paddingRight: '2rem' }}>
                   Forum
-                </Nav.Link>
-                <Nav.Link href="#contact-me">Pay Maintenance</Nav.Link>
+                </Link>
+                <Link to="/pay-maintenance"> Pay Maintenance</Link>
+                {/* <Nav.Link href="#contact-me">Pay Maintenance</Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Container>
