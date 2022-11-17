@@ -19,50 +19,50 @@ import './landing.css';
 //   );
 // }
 
-function TopBar() {
-  return (
-    <>
-      {['sm'].map((expand) => (
-        <Navbar
-          key={expand}
-          variant="dark"
-          expand={expand}
-          className="my-navbar"
-          fixed="top"
-        >
-          <Container fluid>
-            <Navbar.Brand href="#" className="brand">
-              HoGo.
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto justify-content-end flex-grow-1 pe-3 offcanvas-body">
-                {/* <Nav.Link href="#my-projects" style={{ paddingRight: '2rem' }}>
-                  Gate Entry
-                </Nav.Link>
-                <Nav.Link href="#my-projects" style={{ paddingRight: '2rem' }}>
-                  Directory
-                </Nav.Link>
-                <Nav.Link
-                  href="#"
-                  target="_blank"
-                  style={{ paddingRight: '2rem' }}
-                >
-                  Forum
-                </Nav.Link> */}
-                <Nav.Link>
-                  <Button variant="light" className="mp-btn">
-                    Sign in
-                  </Button>
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      ))}
-    </>
-  );
-}
+// function TopBar() {
+//   return (
+//     <>
+//       {['sm'].map((expand) => (
+//         <Navbar
+//           key={expand}
+//           variant="dark"
+//           expand={expand}
+//           className="my-navbar"
+//           fixed="top"
+//         >
+//           <Container fluid>
+//             <Navbar.Brand href="#" className="brand">
+//               HoGo.
+//             </Navbar.Brand>
+//             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//             <Navbar.Collapse id="basic-navbar-nav">
+//               <Nav className="me-auto justify-content-end flex-grow-1 pe-3 offcanvas-body">
+//                 {/* <Nav.Link href="#my-projects" style={{ paddingRight: '2rem' }}>
+//                   Gate Entry
+//                 </Nav.Link>
+//                 <Nav.Link href="#my-projects" style={{ paddingRight: '2rem' }}>
+//                   Directory
+//                 </Nav.Link>
+//                 <Nav.Link
+//                   href="#"
+//                   target="_blank"
+//                   style={{ paddingRight: '2rem' }}
+//                 >
+//                   Forum
+//                 </Nav.Link> */}
+//                 <Nav.Link>
+//                   <Button variant="light" className="mp-btn">
+//                     Sign in
+//                   </Button>
+//                 </Nav.Link>
+//               </Nav>
+//             </Navbar.Collapse>
+//           </Container>
+//         </Navbar>
+//       ))}
+//     </>
+//   );
+// }
 
 function Home() {
   return (
@@ -263,7 +263,7 @@ function MaintenanceFeature() {
 function App() {
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <Home />
       <GateFeature />
       <DirectoryFeature />

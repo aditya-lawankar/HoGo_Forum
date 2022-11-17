@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #010508;
-  color: #f7f9fa;
+  background-color: white;
+  color: #010508;
 }
 
 code {
@@ -15,13 +15,18 @@ code {
 }
 
 .my-navbar {
-  background-color: #010508;
+  background-color: #ffffff;
 }
 
 .brand {
   font-size: 2rem;
   padding-left: 0.5rem;
   font-weight: 600;
+  color: #010508;
+}
+
+.brand:hover {
+  color: #010508;
 }
 
 .offcanvas-title,
@@ -37,6 +42,7 @@ code {
   border-radius: 10px;
   padding-bottom: 2rem;
   margin-bottom: 4rem;
+  margin-top: 1rem;
 
   /* margin-top: 2rem; */
   /* border: 1px solid rgba(255, 255, 255, 0.18); */
@@ -53,10 +59,15 @@ code {
 .abt-box > h1 {
   text-align: center;
   padding-top: 2rem;
+  font-weight: bold;
+  color: #f7f9fa;
 }
 
 .abt-desc {
-  font-size: 1.2rem;
+  color: #f7f9fa;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .mp-btn,
@@ -97,4 +108,7 @@ code {
 
 .set-pay > h1 {
   padding-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f7f9fa;
 }
