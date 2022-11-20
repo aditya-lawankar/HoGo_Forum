@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 function MaintenanceCard() {
@@ -9,7 +10,7 @@ function MaintenanceCard() {
         <Col
           sm={{ span: 10, offset: 1 }}
           style={{
-            backgroundImage: "url('/g1.jpg')",
+            backgroundImage: "url('/img/g1.jpg')",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',

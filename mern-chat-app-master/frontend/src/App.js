@@ -17,6 +17,7 @@ function App() {
       <Route path="/chats" component={Chatpage} />
       <Route path="/directories" component={Directory} />
       <Route path="/pay-maintenance" component={Maintenance} />
+      {/* <Route path="/gate-entry" component={Gateentry} /> */}
       {/* </Switch>
       </Router> */}
     </div>
