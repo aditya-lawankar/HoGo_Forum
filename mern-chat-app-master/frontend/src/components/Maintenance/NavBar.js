@@ -22,6 +22,13 @@ function NavBar() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto justify-content-end flex-grow-1 pe-3 offcanvas-body">
                 <Link
+                  to="/home-owner-entry"
+                  style={{ paddingRight: '2rem', marginTop: '0.1rem' }}
+                >
+                  Home Owner Entry
+                </Link>
+
+                <Link
                   to="/gate-entry"
                   style={{ paddingRight: '2rem', marginTop: '0.1rem' }}
                 >
